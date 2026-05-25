@@ -7,6 +7,7 @@ public class Order {
     private ArrayList<Drink> drinks;
     private ArrayList<ChipsAndSalsa> chips;
 
+    //constructor
     public Order() {// no parameters b/c order is starting from 0
         this.tacos = new ArrayList<>();
         this.drinks = new ArrayList<>();
@@ -24,7 +25,18 @@ public class Order {
                 .sum();
     }
     public String getOrderSummary () {
-        return "";
+        String summary = "";
+        for(Taco t: tacos) {
+            summary += t.toString() + "\n";
+        }
+        for(Drink d: drinks) {
+            summary += d.toString() + "\n";
+        }
+        for(ChipsAndSalsa c: chips) {
+            summary += c.toString() + "\n";
+        }
+        summary += "Total: $" + String.format("%.2f", getTotal());
+        return summary;
     }
     public void addTaco (Taco taco){
         this.tacos.add(taco);
