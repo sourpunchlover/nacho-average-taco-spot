@@ -34,6 +34,7 @@ public class UserInterface {
             System.out.println("\t3) Add Chips  & Salsa");
             System.out.println("\t4) Checkout");
             System.out.println("\t0) Cancel Order");
+            System.out.println("Enter your selection: ");
             String userOption = scanner.nextLine();
 
             switch (userOption) {
@@ -60,6 +61,77 @@ public class UserInterface {
         }
 
     }
+    public void displayAddTacoScreen() {
+        System.out.println("Select shell type: ");
+        System.out.println("\t1) Corn");
+        System.out.println("\t2) Flour");
+        System.out.println("\t3) Hard Shell");
+        System.out.println("\t4) Bowl");
+        System.out.println("Enter your selection: ");
+        String shellChoice = scanner.nextLine();
+
+        String shell = "";
+        switch (shellChoice) {
+            case "1":
+                shell = "Corn";
+                break;
+            case "2":
+                shell = "Flour";
+                break;
+            case "3":
+                shell = "Hard Shell";
+                break;
+            case "4":
+                shell = "Bowl";
+                break;
+            default: System.out.println("Invalid option entered. Try again.");
+                System.out.println("\n");
+        }
+    }
+    private String selectShell() {
+        System.out.println("Select shell type: ");
+        System.out.println("\t1) Corn");
+        System.out.println("\t2) Flour");
+        System.out.println("\t3) Hard Shell");
+        System.out.println("\t4) Bowl");
+        System.out.println("Enter your selection: ");
+        String shellChoice = scanner.nextLine();
+
+        switch (shellChoice) {
+            case "1":
+                return "Corn";
+            case "2":
+               return "Flour";
+            case "3":
+                return "Hard Shell";
+            case "4":
+                return "Bowl";
+            default: System.out.println("Invalid option entered. Try again.");
+                System.out.println("\n");
+        } return "";
+    }
+    private String selectSize() {
+        System.out.println("Select size: ");
+        System.out.println("\t1) Single");
+        System.out.println("\t2) 3 Taco Plate");
+        System.out.println("\t3) Burrito");
+        System.out.println("Enter your selection: ");
+        String size = scanner.nextLine();
+
+        switch (size) {
+            case "1":
+                return "Single";
+            case "2":
+                return "3 Taco Plate";
+            case "3":
+                return "Burrito";
+            default: System.out.println("Invalid option entered. Try again.");
+                System.out.println("\n");
+        } return "";
+    }
+    public void displayAddDrinkScreen() {}
+    public void displayAddChipsAndSalsaScreen() {}
+    public void displayCheckoutScreen
 
 
 }

@@ -31,13 +31,13 @@ public class Taco {
     public double getPrice() {
         double startPrice = 0;
         switch (size) {
-            case "single":
+            case "Single":
                 startPrice = 3.50;
                 break;
-            case "3 taco plate":
+            case "3 Taco Plate":
                 startPrice = 9.00;
                 break;
-            case "burrito":
+            case "Burrito":
                 startPrice = 8.50;
                 break;
             default:
