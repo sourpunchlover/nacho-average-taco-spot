@@ -14,4 +14,7 @@ public abstract class Topping {
     public String getName() {
         return name;
     }
+    public void setExtra() {
+        this.isExtra = true;
+    }
 }
