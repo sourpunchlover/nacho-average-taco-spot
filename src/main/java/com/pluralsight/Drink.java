@@ -1,12 +1,13 @@
 package com.pluralsight;
 
 public class Drink {
-    private String size;
+    private String size, flavor;
 
     //constructor
 
-    public Drink(String size) {
+    public Drink(String size, String flavor) {
         this.size = size;
+        this.flavor = flavor;
     }
 
     public double getPrice() {
@@ -28,7 +29,7 @@ public class Drink {
     }
 
     public String toString() {
-        String drinkOrder = "Size: " + size + "\n";
+        String drinkOrder = "Size: " + size + "\n" + "Flavor: " + flavor + "\n";
         return drinkOrder;
 
     }

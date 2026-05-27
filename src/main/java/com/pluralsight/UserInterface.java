@@ -43,7 +43,7 @@ public class UserInterface {
                     displayAddTacoScreen();
                     break;
                 case "2":
-                    //displayAddDrinkScreen();
+                    displayAddDrinkScreen();
                     break;
                 case "3":
                     //displayAddChipsAndSalsaScreen();
@@ -390,7 +390,63 @@ public class UserInterface {
     }
 
 
-public void displayAddDrinkScreen() {}
+public void displayAddDrinkScreen() {
+    //size options
+    System.out.println("Select size: ");
+    System.out.println("\t1) Small");
+    System.out.println("\t2) Medium");
+    System.out.println("\t3) Large");
+    System.out.println("\t0) Done");
+    System.out.println("Enter your selection: ");
+    String sizeOption = scanner.nextLine();
+
+    String size = "";
+    switch (sizeOption) {
+        case "1":
+            size = "Small";
+            break;
+        case "2":
+           size = "Medium";
+           break;
+        case "3":
+            size = "Large";
+            break;
+        default:
+            System.out.println("Invalid option entered. Try again.");
+            System.out.println("\n");
+    }
+
+    //flavor options
+    System.out.println("Select drink: ");
+    System.out.println("\t1) Coke");
+    System.out.println("\t2) Sprite");
+    System.out.println("\t3) Bottle Water");
+    System.out.println("\t4) Topo Chico");
+    System.out.println("\t0) Done");
+    System.out.println("Enter your selection: ");
+    String flavorOption = scanner.nextLine();
+
+    String flavor = "";
+    switch (flavorOption) {
+        case "1":
+            flavor = "Coke";
+            break;
+        case "2":
+            flavor = "Sprite";
+            break;
+        case "3":
+            flavor = "Bottle Water";
+            break;
+        case "4":
+            flavor = "Topo Chico";
+            break;
+        default:
+            System.out.println("Invalid option entered. Try again.");
+            System.out.println("\n");
+    }
+    Drink drink = new Drink(size, flavor);
+    order.addDrink(drink);
+}
     public void displayAddChipsAndSalsaScreen() {}
     public void displayCheckoutScreen() {}
 
