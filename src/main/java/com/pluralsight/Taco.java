@@ -51,7 +51,7 @@ public class Taco implements MenuItem {
     public String toString() {
         String tacoOrder = "Size: " + size + "\n" + "Shell: " + shell + "\n" + "Covered: " + isCovered + "\n" + "Toppings: \n";
         for(Topping t: toppings) {
-            tacoOrder += t.toString() + "\n";
+            tacoOrder += t.toString(size) + "\n";
         }
         return tacoOrder;
     }

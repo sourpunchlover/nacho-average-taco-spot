@@ -9,7 +9,10 @@ public abstract class Topping {
         this.name = name;
         this.isExtra = false;
     }
+
     public abstract double getPrice(String size);
+
+    public abstract String toString(String size);
 
     public String getName() {
         return name;

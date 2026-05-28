@@ -48,4 +48,9 @@ public class Order {
         this.chips.add(chips);
     }
 
+    public boolean isValid() {
+        return tacos.size() > 0 || drinks.size() > 0 || chips.size() > 0;
+    }
+
+
 }

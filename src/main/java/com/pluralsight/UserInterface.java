@@ -20,7 +20,7 @@ public class UserInterface {
             } else if (userOption.equals("0")) {
                 break;
             } else {
-                System.out.println("Invalid option, please try again.");
+                System.out.println("Invalid user option, please try again.");
             }
 
         }
@@ -49,14 +49,13 @@ public class UserInterface {
                     displayAddChipsAndSalsaScreen();
                     break;
                 case "4":
-                    //displayCheckoutScreen();
-                    break;
+                    displayCheckoutScreen();
+                    return;
                 case "0":
-                    //cancelOrder();
-                    order = new Order();
-                    break;
+                    order = new Order(); //cancels order
+                    return; //exits whole method
                 default:
-                    System.out.println("Invalid option entered. Try again.");
+                    System.out.println("Invalid user option entered. Try again.");
                     System.out.println("\n");
             }
         }
@@ -93,7 +92,7 @@ public class UserInterface {
                 return "Hard Shell";
             case "4":
                 return "Bowl";
-            default: System.out.println("Invalid option entered. Try again.");
+            default: System.out.println("Invalid shell option entered. Try again.");
                 System.out.println("\n");
         } return "";
     }
@@ -113,7 +112,7 @@ public class UserInterface {
                 return "3 Taco Plate";
             case "3":
                 return "Burrito";
-            default: System.out.println("Invalid option entered. Try again.");
+            default: System.out.println("Invalid size option entered. Try again.");
                 System.out.println("\n");
         } return "";
     }
@@ -185,7 +184,7 @@ public class UserInterface {
                     break;
                 case "0":
                     return;
-                default: System.out.println("Invalid option entered. Try again.");
+                default: System.out.println("Invalid meat option entered. Try again.");
                     System.out.println("\n");
             }
             if (meat != null) {
@@ -244,7 +243,7 @@ public class UserInterface {
                 case "0":
                     return;
                 default:
-                    System.out.println("Invalid option entered. Try again.");
+                    System.out.println("Invalid cheese option entered. Try again.");
                     System.out.println("\n");
 
 
@@ -303,7 +302,7 @@ public class UserInterface {
                 case "0":
                     return;
                 default:
-                    System.out.println("Invalid option entered. Try again.");
+                    System.out.println("Invalid topping option entered. Try again.");
                     System.out.println("\n");
             }
         }
@@ -345,7 +344,7 @@ public class UserInterface {
                 case "0":
                     return;
                 default:
-                    System.out.println("Invalid option entered. Try again.");
+                    System.out.println("Invalid sauce option entered. Try again.");
                     System.out.println("\n");
             }
         }
@@ -371,7 +370,7 @@ public class UserInterface {
                 case "0":
                     return;
                 default:
-                    System.out.println("Invalid option entered. Try again.");
+                    System.out.println("Invalid side option entered. Try again.");
                     System.out.println("\n");
             }
         }
@@ -411,7 +410,7 @@ public void displayAddDrinkScreen() {
             size = "Large";
             break;
         default:
-            System.out.println("Invalid option entered. Try again.");
+            System.out.println("Invalid size option entered. Try again.");
             System.out.println("\n");
     }
 
@@ -439,7 +438,7 @@ public void displayAddDrinkScreen() {
             flavor = "Topo Chico";
             break;
         default:
-            System.out.println("Invalid option entered. Try again.");
+            System.out.println("Invalid flavor option entered. Try again.");
             System.out.println("\n");
     }
     Drink drink = new Drink(size, flavor);
@@ -469,7 +468,7 @@ public void displayAddChipsAndSalsaScreen() {
             salsa = "Mango Heat";
             break;
         default:
-            System.out.println("Invalid option entered. Try again.");
+            System.out.println("Invalid salsa option entered. Try again.");
             System.out.println("\n");
     }
     ChipsAndSalsa chips = new ChipsAndSalsa(salsa);
@@ -478,6 +477,10 @@ public void displayAddChipsAndSalsaScreen() {
 
 
 public void displayCheckoutScreen() {
+    if (!order.isValid()) {
+        System.out.println("Invalid order! You must purchase chips and salsa or a drink.");
+        return;
+    }
     System.out.println(order.getOrderSummary());
     System.out.println("Select option: ");
     System.out.println("\t1) Confirm");
@@ -490,12 +493,12 @@ public void displayCheckoutScreen() {
             Receipt receipt = new Receipt();
             receipt.saveOrderReceipt(order);
             order = new Order();
-            break;
+            return;
         case "0":
             order = new Order();
             break;
         default:
-            System.out.println("Invalid option entered. Try again.");
+            System.out.println("Invalid checkout option entered. Try again.");
             System.out.println("\n");
     }
 }

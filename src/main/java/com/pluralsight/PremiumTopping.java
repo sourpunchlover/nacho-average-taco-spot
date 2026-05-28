@@ -15,11 +15,11 @@ public class PremiumTopping extends Topping {
     public double getPrice(String size) {
 
         switch (size) {
-            case "single":
+            case "Single":
                 return singlePrice;
-            case "3 taco plate":
+            case "3 Taco Plate":
                 return platePrice;
-            case "burrito":
+            case "Burrito":
                 return burritoPrice;
             default:
                 System.out.println("Invalid option");

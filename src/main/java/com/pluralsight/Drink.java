@@ -13,17 +13,17 @@ public class Drink implements MenuItem {
     public double getPrice() {
         double drinkPrice = 0;
         switch (size) {
-            case "small":
+            case "Small":
                 drinkPrice = 2.00;
                 break;
-            case "medium":
+            case "Medium":
                 drinkPrice = 2.50;
                 break;
-            case "large":
+            case "Large":
                 drinkPrice = 3.00;
                 break;
             default:
-                System.out.println("Invalid option");
+                System.out.println("Invalid drink option");
         }
         return drinkPrice;
     }
