@@ -466,7 +466,7 @@ public void displayAddChipsAndSalsaScreen() {
             salsa = "Mean Green";
             break;
         case "4":
-            salsa = "Mango Malicia";
+            salsa = "Mango Heat";
             break;
         default:
             System.out.println("Invalid option entered. Try again.");
@@ -477,7 +477,28 @@ public void displayAddChipsAndSalsaScreen() {
 }
 
 
-public void displayCheckoutScreen() {}
+public void displayCheckoutScreen() {
+    System.out.println(order.getOrderSummary());
+    System.out.println("Select option: ");
+    System.out.println("\t1) Confirm");
+    System.out.println("\t0) Cancel");
+    System.out.println("Enter your selection: ");
+    String checkoutOption = scanner.nextLine();
+
+    switch (checkoutOption) {
+        case "1":
+            Receipt receipt = new Receipt();
+            receipt.saveOrderReceipt(order);
+            order = new Order();
+            break;
+        case "0":
+            order = new Order();
+            break;
+        default:
+            System.out.println("Invalid option entered. Try again.");
+            System.out.println("\n");
+    }
+}
 
 
 }
