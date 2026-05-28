@@ -1,6 +1,6 @@
 package com.pluralsight;
 
-public class ChipsAndSalsa {
+public class ChipsAndSalsa implements MenuItem {
     private String salsaType;
 
     //constructor

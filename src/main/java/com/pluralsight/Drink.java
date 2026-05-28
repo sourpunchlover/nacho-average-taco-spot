@@ -1,6 +1,6 @@
 package com.pluralsight;
 
-public class Drink {
+public class Drink implements MenuItem {
     private String size, flavor;
 
     //constructor

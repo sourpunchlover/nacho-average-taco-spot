@@ -2,7 +2,7 @@ package com.pluralsight;
 
 import java.util.ArrayList;
 
-public class Taco {
+public class Taco implements MenuItem {
     private String size, shell;
     private boolean isCovered;
     private ArrayList<Topping> toppings;
