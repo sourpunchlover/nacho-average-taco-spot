@@ -46,7 +46,7 @@ public class UserInterface {
                     displayAddDrinkScreen();
                     break;
                 case "3":
-                    //displayAddChipsAndSalsaScreen();
+                    displayAddChipsAndSalsaScreen();
                     break;
                 case "4":
                     //displayCheckoutScreen();
@@ -396,7 +396,6 @@ public void displayAddDrinkScreen() {
     System.out.println("\t1) Small");
     System.out.println("\t2) Medium");
     System.out.println("\t3) Large");
-    System.out.println("\t0) Done");
     System.out.println("Enter your selection: ");
     String sizeOption = scanner.nextLine();
 
@@ -422,7 +421,6 @@ public void displayAddDrinkScreen() {
     System.out.println("\t2) Sprite");
     System.out.println("\t3) Bottle Water");
     System.out.println("\t4) Topo Chico");
-    System.out.println("\t0) Done");
     System.out.println("Enter your selection: ");
     String flavorOption = scanner.nextLine();
 
@@ -447,8 +445,39 @@ public void displayAddDrinkScreen() {
     Drink drink = new Drink(size, flavor);
     order.addDrink(drink);
 }
-    public void displayAddChipsAndSalsaScreen() {}
-    public void displayCheckoutScreen() {}
+public void displayAddChipsAndSalsaScreen() {
+    System.out.println("Select salsa: ");
+    System.out.println("\t1) Smoky Señorita \uD83D\uDD25 Rich chipotle and roasted garlic salsa with a deep, slow-building smokiness. The fan favorite.");
+    System.out.println("\t2) Fuego Fresco \uD83D\uDD25\uD83D\uDE05 Bright, fiery salsa with fresh habanero, charred tomato, and a squeeze of lime. Hot but balanced.");
+    System.out.println("\t3) Mean Green \uD83D\uDD25\uD83D\uDD25\uD83E\uDD27 Punchy tomatillo-serrano salsa with cilantro and a sharp, herbaceous kick. Not for the faint of heart.");
+    System.out.println("\t4) Mango Heat \uD83D\uDD25\uD83D\uDD25\uD83D\uDD25\uD83E\uDD75 Sweet mango meets scorpion pepper in this fruity, deceptively spicy salsa. Looks innocent, isn't.");
+    System.out.println("Enter your selection: ");
+    String salsaOption = scanner.nextLine();
+
+    String salsa = "";
+    switch (salsaOption) {
+        case "1":
+            salsa = "Smokey Señorita";
+            break;
+        case "2":
+            salsa = "Fuego Fresco";
+            break;
+        case "3":
+            salsa = "Mean Green";
+            break;
+        case "4":
+            salsa = "Mango Malicia";
+            break;
+        default:
+            System.out.println("Invalid option entered. Try again.");
+            System.out.println("\n");
+    }
+    ChipsAndSalsa chips = new ChipsAndSalsa(salsa);
+    order.addChips(chips);
+}
+
+
+public void displayCheckoutScreen() {}
 
 
 }

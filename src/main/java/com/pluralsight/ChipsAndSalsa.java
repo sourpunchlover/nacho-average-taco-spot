@@ -1,14 +1,20 @@
 package com.pluralsight;
 
 public class ChipsAndSalsa {
+    private String salsaType;
+
+    //constructor
+    public ChipsAndSalsa(String salsaType) {
+        this.salsaType = salsaType;
+    }
 
     public double getPrice() {
         return 1.50;
     }
 
     public String toString() {
-        String addOn = "Chips and Salsa";
-        return addOn;
+        String addChips = "Salsa Type: " + salsaType + "\n";
+        return addChips;
 
     }
 }
