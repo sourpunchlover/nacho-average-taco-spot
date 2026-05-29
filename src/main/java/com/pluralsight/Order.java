@@ -26,16 +26,36 @@ public class Order {
     }
     public String getOrderSummary () {
         String summary = "";
-        for(Taco t: tacos) {
-            summary += t.toString() + "\n";
+        summary += "****************************************\n";
+        summary += "      NACHO AVERAGE TACO SPOT\n";
+        summary += "    1111 Taco Blvd, Marietta, GA\n";
+        summary += "         Phone: 678-000-0000\n";
+        summary += "****************************************\n";
+
+        if (!tacos.isEmpty()){
+            summary += "-------------- TACOS ------------------\n";
+            for(Taco t: tacos) {
+                summary += t.toString() + "\n";
+            }
         }
-        for(Drink d: drinks) {
-            summary += d.toString() + "\n";
+
+        if (!drinks.isEmpty()) {
+            summary += "-------------- DRINKS ------------------\n";
+            for(Drink d: drinks) {
+                summary += d.toString() + "\n";
+            }
         }
-        for(ChipsAndSalsa c: chips) {
-            summary += c.toString() + "\n";
+
+        if (!chips.isEmpty()) {
+            summary += "-------------- CHIPS & SALSA ------------------\n";
+            for(ChipsAndSalsa c: chips) {
+                summary += c.toString() + "\n";
+            }
         }
-        summary += "Total: $" + String.format("%.2f", getTotal());
+
+        summary += "****************************************\n";
+        summary += "            Total: $" + String.format("%.2f", getTotal()) + "\n";
+        summary += "****************************************\n";
         return summary;
     }
     public void addTaco (Taco taco){

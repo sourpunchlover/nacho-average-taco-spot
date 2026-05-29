@@ -19,6 +19,15 @@ public class Taco implements MenuItem {
     public void addTopping(Topping topping) {
         this.toppings.add(topping);
     }
+    public void removeTopping(String name) {
+        for (int i = 0; i < toppings.size(); i++) {
+            if (toppings.get(i).getName().equalsIgnoreCase(name)) {
+                toppings.remove(i);
+                break;
+            }
+        }
+
+    }
 
     public boolean isCovered() {
         return this.isCovered;

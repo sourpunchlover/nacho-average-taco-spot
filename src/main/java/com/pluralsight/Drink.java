@@ -29,7 +29,7 @@ public class Drink implements MenuItem {
     }
 
     public String toString() {
-        String drinkOrder = "Size: " + size + "\n" + "Flavor: " + flavor + "\n";
+        String drinkOrder = "Size: " + size + "\n" + "Flavor: " + flavor + "\n" + "Price: $" + String.format("%.2f", getPrice()) + "\n";
         return drinkOrder;
 
     }

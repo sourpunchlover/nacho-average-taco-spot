@@ -13,7 +13,7 @@ public class ChipsAndSalsa implements MenuItem {
     }
 
     public String toString() {
-        String addChips = "Salsa Type: " + salsaType + "\n";
+        String addChips = "Salsa Type: " + salsaType + "\n" + "Price: $1.50\n";
         return addChips;
 
     }

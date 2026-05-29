@@ -29,7 +29,7 @@ public class PremiumTopping extends Topping {
     }
 
     public String toString(String size) {
-        String topping = "Name: " + name + "\n" + "Extra: " + isExtra + "\n" + "Price: " + getPrice(size);
+        String topping = "Name: " + name + "\n" + "Extra: " + isExtra + "\n" + "Price: $" + String.format("%.2f", getPrice(size));
         return topping;
     }
 }
