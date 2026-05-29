@@ -1,6 +1,6 @@
 package com.pluralsight;
 
-public class TheBajaBabe extends Taco implements SignatureItem {
+public class TheBajaBabe extends Taco {
 
     public TheBajaBabe() {
         super("Single", "Flour");
@@ -11,7 +11,7 @@ public class TheBajaBabe extends Taco implements SignatureItem {
         addTopping(new RegularTopping("Mango Heat"));
     }
 
-    @Override
+
     public String getDescription() {
         return "Sweet heat meets fresh fish.";
     }

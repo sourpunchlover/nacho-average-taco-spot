@@ -1,6 +1,6 @@
 package com.pluralsight;
 
-public class TheOG extends Taco implements SignatureItem{
+public class TheOG extends Taco {
 
     public TheOG() {
         super("Single", "Corn");
@@ -13,7 +13,7 @@ public class TheOG extends Taco implements SignatureItem{
 
     }
 
-    @Override
+
     public String getDescription() {
         return "Simple, classic, no notes.";
     }

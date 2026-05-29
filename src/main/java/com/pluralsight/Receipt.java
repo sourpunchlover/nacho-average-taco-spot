@@ -11,7 +11,7 @@ public class Receipt {
 
     public void saveOrderReceipt(Order order) {
 
-        LocalDateTime date = LocalDateTime.now();//gets current date
+        LocalDateTime date = LocalDateTime.now();
         DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("yyyyMMdd-HHmmss");
         String fileName = date.format(dateFormatter) + ".txt";
 

@@ -1,6 +1,6 @@
 package com.pluralsight;
 
-public class TheHeavyweight extends Taco implements SignatureItem {
+public class TheHeavyweight extends Taco {
 
     public TheHeavyweight() {
         super("Burrito", "Flour");
@@ -15,7 +15,7 @@ public class TheHeavyweight extends Taco implements SignatureItem {
         addTopping(new RegularTopping("Extra Hot"));
     }
 
-    @Override
+
     public String getDescription() {
         return "TKO guaranteed after the first bite.";
     }
