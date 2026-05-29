@@ -548,9 +548,9 @@ public class UserInterface {
         System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
         System.out.println();
         System.out.println("Select salsa: ");
-        System.out.println("\t1) Smoky Señorita \uD83D\uDD25 Rich chipotle and roasted garlic salsa with a deep, slow-building smokiness. The fan favorite.");
+        System.out.println("\t1) Smoky Señorita \uD83D\uDD25 Rich chipotle and roasted garlic salsa with a deep, slow building smokiness. The fan favorite.");
         System.out.println("\t2) Fuego Fresco \uD83D\uDD25\uD83D\uDE05 Bright, fiery salsa with fresh habanero, charred tomato, and a squeeze of lime. Hot but balanced.");
-        System.out.println("\t3) Mean Green \uD83D\uDD25\uD83D\uDD25\uD83E\uDD27 Punchy tomatillo-serrano salsa with cilantro and a sharp, herbaceous kick. Not for the faint of heart.");
+        System.out.println("\t3) Mean Green \uD83D\uDD25\uD83D\uDD25\uD83E\uDD27 Punchy tomatillo serrano salsa with cilantro and a sharp, herbaceous kick. Not for the faint of heart.");
         System.out.println("\t4) Mango Heat \uD83D\uDD25\uD83D\uDD25\uD83D\uDD25\uD83E\uDD75 Sweet mango meets scorpion pepper in this fruity, deceptively spicy salsa. Looks innocent, isn't.");
         System.out.println("Enter your selection: ");
         String salsaOption = scanner.nextLine();

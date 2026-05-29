@@ -34,22 +34,22 @@ public class Order {
 
         if (!tacos.isEmpty()){
             summary += "-------------- TACOS ------------------\n";
-            for(Taco t: tacos) {
-                summary += t.toString() + "\n";
+            for (int i = tacos.size() - 1; i >= 0; i--) {
+                summary += tacos.get(i).toString() + "\n";
             }
         }
 
         if (!drinks.isEmpty()) {
             summary += "-------------- DRINKS ------------------\n";
-            for(Drink d: drinks) {
-                summary += d.toString() + "\n";
+            for (int i = drinks.size() - 1; i >= 0; i--) {
+                summary += drinks.get(i).toString() + "\n";
             }
         }
 
         if (!chips.isEmpty()) {
             summary += "-------------- CHIPS & SALSA ------------------\n";
-            for(ChipsAndSalsa c: chips) {
-                summary += c.toString() + "\n";
+            for (int i = chips.size() - 1; i >= 0; i--) {
+                summary += chips.get(i).toString() + "\n";
             }
         }
 
